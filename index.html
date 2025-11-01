@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Frederic & Dominique — Convite de Casamento</title>
+<meta name="description" content="Convite de casamento de Frederic e Dominique — 04 de dezembro de 2025. Almoço de celebração na Casa Buonasera, Niterói.">
+<meta name="theme-color" content="#0A0A1A">
+
+<!-- Open Graph / WhatsApp Preview -->
+<meta property="og:title" content="Frederic & Dominique — Convite de Casamento">
+<meta property="og:description" content="Convidamos você para celebrar nosso casamento em 04/12/2025">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://convite-casamento-virid.vercel.app/">
+<meta property="og:image" content="https://convite-casamento-virid.vercel.app/img/domiefred5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Preload da imagem hero para acelerar o primeiro paint -->
+<link rel="preload" as="image" href="img/domiefred5.jpg" imagesrcset="img/domiefred5.jpg 1x">
+
+<!-- JSON-LD do evento -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Casamento de Frederic e inique",
+  "startDate": "2025-12-04T13:30:00-03:00",
+  "endDate": "2025-12-04T15:30:00-03:00",
+  "location": {
+    "@type": "Place",
+    "name": "Casa Buonasera",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Estrada Leopoldo Fróes, 34",
+      "addressLocality": "Niterói",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  },
+  "organizer": [
+    { "@type": "Person", "name": "Frederic" },
+    { "@type": "Person", "name": "inique" }
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1A1A2E;--pearl:#F5F7FA;--gold:#C9A96E;--transition:all .3s cubic-bezier(.4,0,.2,1)}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--navy);color:var(--pearl);line-height:1.6;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(26,26,46,.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+nav ul{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;list-style:none;max-width:1200px;margin:0 auto}
+nav a{color:var(--pearl);text-decoration:none;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;transition:var(--transition);display:inline-block}
+nav a:hover,nav a:focus{background:rgba(201,169,110,.15);color:var(--gold);outline:none}
+
+section{min-height:100vh;padding:6rem 1.5rem 3rem;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;justify-content:center}
+
+#hero{position:relative;text-align:center}
+#hero h1{font-size:clamp(2.5rem,8vw,4.5rem);font-weight:300;letter-spacing:.15em;margin-bottom:1rem;color:var(--gold);text-transform:uppercase}
+#hero .subtitle{font-size:clamp(1rem,3vw,1.25rem);margin-bottom:3rem;opacity:.9;font-weight:300;letter-spacing:.05em}
+
+.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bounce 2s infinite;cursor:pointer;z-index:1}
+.scroll-indicator span{font-size:.85rem;color:var(--gold);opacity:.9;letter-spacing:.05em}
+.scroll-arrow{width:30px;height:30px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg);animation:arrow-pulse 2s infinite}
+@keyframes bounce{0%,20%,50%,80%,100%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-10px)}60%{transform:translateX(-50%) translateY(-5px)}}
+@keyframes arrow-pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.scroll-indicator.hidden{opacity:0;pointer-events:none;transition:opacity .5s ease}
+
+.btn-group{display:flex;flex-direction:column;gap:1rem;max-width:400px;margin:0 auto}
+.btn{display:inline-block;padding:1rem 2rem;background:var(--gold);color:var(--navy);text-decoration:none;border-radius:12px;font-weight:600;transition:var(--transition);border:2px solid var(--gold);text-align:center;cursor:pointer;font-size:1rem}
+.btn:hover,.btn:focus{background:transparent;color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 25px rgba(201,169,110,.3);outline:none}
+.btn-secondary{background:transparent;border:2px solid var(--pearl);color:var(--pearl)}
+.btn-secondary:hover,.btn-secondary:focus{background:var(--pearl);color:var(--navy);border-color:var(--pearl)}
+
+h2{font-size:clamp(2rem,6vw,3rem);margin-bottom:2rem;text-align:center;color:var(--gold);font-weight:300;letter-spacing:.08em}
+
+.content-box{background:rgba(245,247,250,.05);border-radius:16px;padding:2rem;margin-bottom:2rem;border:1px solid rgba(201,169,110,.2);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.highlight{color:var(--gold);font-weight:600}
+
+.event-details{display:grid;gap:1.5rem;margin:2rem 0}
+.event-card{background:rgba(201,169,110,.08);padding:1.5rem;border-radius:12px;border-left:4px solid var(--gold)}
+.event-card strong{color:var(--gold);display:block;margin-bottom:.5rem;font-size:1.1rem}
+
+.rsvp-deadline{background:linear-gradient(135deg, rgba(201,169,110,.15), rgba(201,169,110,.05));padding:1.5rem;border-radius:12px;text-align:center;margin:2rem 0;border:2px solid var(--gold)}
+.rsvp-deadline p{font-size:1.1rem;margin-bottom:.5rem}
+.confirmed-status{background:rgba(76,175,80,.2);padding:1rem;border-radius:8px;text-align:center;margin-bottom:1rem;border:1px solid rgba(76,175,80,.5)}
+
+.rsvp-form{display:flex;flex-direction:column;gap:1rem;margin:2rem 0}
+.rsvp-form input,.rsvp-form textarea{padding:1rem;border-radius:8px;border:1px solid rgba(201,169,110,.3);background:rgba(245,247,250,.05);color:var(--pearl);font-family:inherit;font-size:1rem}
+.rsvp-form input:focus,.rsvp-form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,110,.2)}
+
+.restaurant-links{display:grid;gap:1rem;margin-top:2rem}
+.restaurant-card{background:rgba(201,169,110,.08);padding:1.5rem;border-radius:12px;text-align:center;transition:var(--transition);border:1px solid rgba(201,169,110,.2)}
+.restaurant-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(201,169,110,.2);border-color:var(--gold)}
+.restaurant-card h3{color:var(--gold);margin-bottom:1rem;font-size:1.3rem}
+
+.story-text{max-width:800px;margin:0 auto;text-align:justify;line-height:1.8;font-size:1.05rem}
+.story-text p{margin-bottom:1.5rem}
+
+.gallery-container{position:relative;margin:2rem 0}
+.gallery-slider{position:relative;overflow:hidden;border-radius:16px}
+.gallery-track{display:flex;transition:transform .5s ease}
+.gallery-item{min-width:100%;cursor:pointer}
+.gallery-item img{width:100%;height:400px;object-fit:cover;border-radius:16px;display:block}
+
+.lightbox{display:none;position:fixed;inset:0;background:rgba(26,26,46,.95);z-index:2000;padding:2rem;align-items:center;justify-content:center}
+.lightbox.active{display:flex}
+.lightbox-content{max-width:90%;max-height:90vh;position:relative}
+.lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:8px}
+.lightbox-close{position:absolute;top:-40px;right:0;background:none;border:none;color:var(--pearl);font-size:2rem;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.lightbox-close:hover,.lightbox-close:focus{color:var(--gold);outline:none}
+
+.map-info{background:rgba(201,169,110,.08);padding:1.5rem;border-radius:12px;margin-top:1rem}
+
+@media (min-width:768px){
+  .btn-group{flex-direction:row;justify-content:center;max-width:none}
+  .restaurant-links{grid-template-columns:repeat(2,1fr)}
+  .gallery-item img{height:500px}
+}
+@media (max-width:768px){
+  .gallery-item img{height:300px}
+  .gallery-nav{width:40px;height:40px;font-size:1.5rem}
+  .gallery-prev{left:.5rem}
+  .gallery-next{right:.5rem}
+}
+.gallery-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(26,26,46,.8);border:none;color:var(--gold);font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center}
+.gallery-nav:hover,.gallery-nav:focus{background:var(--gold);color:var(--navy);outline:none}
+.gallery-prev{left:1rem}
+.gallery-next{right:1rem}
+
+.gallery-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1rem}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(201,169,110,.3);cursor:pointer;transition:var(--transition);border:none;padding:0}
+.dot.active{background:var(--gold);width:30px;border-radius:5px}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#hero">Início</a></li>
+    <li><a href="#nosso-dia">Nosso Dia</a></li>
+    <li><a href="#rsvp">Confirmar</a></li>
+    <li><a href="#restaurante">Restaurante</a></li>
+    <li><a href="#sobre">Sobre Nós</a></li>
+    <li><a href="#galeria">Fotos</a></li>
+    <li><a href="#local">Local</a></li>
+  </ul>
+</nav>
+
+<!-- HERO com <img> de fundo -->
+<section id="hero" style="position:relative;overflow:hidden;min-height:100vh;padding-top:8rem;">
+  <img
+    src="img/domiefred5.jpg"
+    alt="Frederic e Dominique — capa"
+    loading="eager"
+    decoding="async"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.55);"
+  />
+  <div style="position:relative;z-index:1;">
+    <h1>Frederic & Dominique</h1>
+    <p class="subtitle">Convite de Casamento — 04/12/2025</p>
+    <div class="btn-group">
+      <a href="#rsvp" class="btn">Confirmar Presença</a>
+      <a href="#local" class="btn btn-secondary">Como Chegar</a>
+      <button class="btn btn-secondary" onclick="addToCalendar()" aria-label="Adicionar ao Calendário">Adicionar ao Calendário</button>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" onclick="document.getElementById('nosso-dia').scrollIntoView({behavior: 'smooth'})">
+    <span>Role para ver mais</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<section id="nosso-dia">
+  <h2>Nosso Dia</h2>
+  <div class="content-box">
+    <div class="event-details">
+      <div class="event-card">
+        <strong>Casamento Civil</strong>
+        <p>04 de dezembro de 2025, somente com testemunhas</p>
+      </div>
+      <div class="event-card">
+        <strong>Almoço de Celebração</strong>
+        <p><span class="highlight">Casa Buonasera</span></p>
+        <p>Estrada Leopoldo Fróes, 34 — São Francisco, Niterói — RJ</p>
+        <p><strong>Chegada:</strong> 13:30</p>
+      </div>
+    </div>
+    <p style="margin-top: 2rem; text-align: center; line-height: 1.8;">
+      A cerimônia civil será um momento reservado apenas para as testemunhas.
+      O almoço na Casa Buonasera é o nosso momento de celebração com todos os queridos
+      que fazem parte da nossa história. É um prazer imenso contar com sua presença!
+    </p>
+  </div>
+</section>
+
+<section id="rsvp">
+  <h2>Confirmação de Presença</h2>
+  <div class="content-box">
+    <div class="rsvp-deadline">
+      <p><strong class="highlight">Confirme até 28/11/2025</strong></p>
+      <p style="font-size: 0.95rem; opacity: 0.9;">A reserva depende do número exato de cadeiras</p>
+    </div>
+
+    <div id="confirmed-message" class="confirmed-status" style="display: none;">
+      ✓ Presença confirmada! Obrigado.
+    </div>
+
+    <div class="btn-group" style="margin-bottom: 2rem;">
+      <a href="https://wa.me/5521969927796?text=Ol%C3%A1%2C%20confirmo%20minha%20presen%C3%A7a%20no%20almo%C3%A7o%20do%20casamento%20em%2004%2F12%2F2025.%20Total%20de%20pessoas%3A%20___.%20Restri%C3%A7%C3%B5es%20alimentares%3A%20___." 
+         class="btn" target="_blank" rel="noopener" onclick="confirmRSVP()" aria-label="Confirmar presença com Dominique via WhatsApp">
+        ✅ Confirmar com Dominique
+      </a>
+      <a href="https://wa.me/5521972260262?text=Ol%C3%A1%2C%20vim%20pelo%20convite%20e%20gostaria%20de%20confirmar." 
+         class="btn btn-secondary" target="_blank" rel="noopener" onclick="confirmRSVP()" aria-label="Falar com Frederic via WhatsApp">
+        📝 Falar com Frederic
+      </a>
+    </div>
+
+    <div style="text-align: center; margin: 2rem 0; opacity: 0.7;">
+      <p style="margin-bottom: 1rem;">— ou —</p>
+      <p style="font-size: 0.95rem;">Preencha abaixo e envie via WhatsApp</p>
+    </div>
+
+    <form class="rsvp-form" onsubmit="sendRSVP(event)">
+      <input type="text" id="nome" placeholder="Seu nome completo" required aria-label="Nome completo">
+      <input type="number" id="pessoas" placeholder="Total de pessoas" min="1" required aria-label="Total de pessoas">
+      <textarea id="restricoes" rows="3" placeholder="Restrições alimentares (opcional)" aria-label="Restrições alimentares"></textarea>
+      <button type="submit" class="btn">Enviar Confirmação</button>
+    </form>
+  </div>
+</section>
+
+<section id="restaurante">
+  <h2>Conheça o Restaurante</h2>
+  <div class="content-box">
+    <p style="text-align: center; margin-bottom: 2rem; line-height: 1.8;">
+      A Casa Buonasera oferece uma experiência gastronômica única,
+      com vista privilegiada e um ambiente sofisticado para celebrar
+      momentos especiais.
+    </p>
+
+    <div class="restaurant-links">
+      <div class="restaurant-card">
+        <h3>🌐 Site Oficial</h3>
+        <p style="margin-bottom: 1rem; opacity: 0.9;">Conheça mais sobre o espaço</p>
+        <a href="https://grupobuonasera.com.br" target="_blank" rel="noopener" class="btn" aria-label="Visitar site do Grupo Buonasera">
+          Visitar Site
+        </a>
+      </div>
+      <div class="restaurant-card">
+        <h3>📋 Cardápio</h3>
+        <p style="margin-bottom: 1rem; opacity: 0.9;">Veja as delícias que aguardam</p>
+        <a href="https://casa-buonasera.goomer.app/menu" target="_blank" rel="noopener" class="btn" aria-label="Ver cardápio da Casa Buonasera">
+          Ver Cardápio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE com <img> de fundo visível -->
+<section id="sobre">
+  <h2>Sobre os Noivos</h2>
+  <div class="content-box" style="position:relative;overflow:hidden;">
+    <img
+      src="img/primeirocontato.jpeg"
+      alt="Frederic e Dominique — ensaio"
+      loading="lazy"
+      decoding="async"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35);"
+    />
+    <div class="story-text" style="position:relative;z-index:1;">
+      <p>
+        Frederic e Dominique quase não foram à festa junina organizada por Sandra — madrinha do casal,
+        amiga-irmã de Dominique e sogra da filha de Frederic. Ela encerrava uma semana exaustiva;
+        ele atravessava um período de desânimo. Ainda assim, algo os moveu naquela noite. Quando
+        Frederic chegou perto da meia-noite, Dominique o viu e sentiu um impulso silencioso, intenso,
+        como quem reconhece um destino.
+      </p>
+      <p>
+        A festa terminou e, apesar dos olhares discretos de Dominique, os caminhos não se cruzaram ali.
+        No dia seguinte, na casa de Sandra, Dominique pediu à filha de Frederic que fizesse a ponte e
+        deixou seu contato. Ele demonstrou interesse, mas conteve a ansiedade: enviou mensagem às 00h00,
+        lida por Dominique às 04h54.
+      </p>
+      <p>
+        Assim começou uma história que mudaria o curso de suas vidas — improvável aos olhos do mundo,
+        inevitável aos olhos do coração.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Nossa História em Imagens</h2>
+  <div class="gallery-container">
+    <div class="gallery-slider">
+      <div class="gallery-track" id="gallery-track"><!-- renderizado via JS --></div>
+    </div>
+    <button class="gallery-nav gallery-prev" onclick="moveGallery(-1)" aria-label="Foto anterior">‹</button>
+    <button class="gallery-nav gallery-next" onclick="moveGallery(1)" aria-label="Próxima foto">›</button>
+    <div class="gallery-dots" id="gallery-dots"></div>
+  </div>
+</section>
+
+<section id="local">
+  <h2>Como Chegar</h2>
+  <div class="content-box">
+    <div class="event-card">
+      <strong>Casa Buonasera</strong>
+      <p>Estrada Leopoldo Fróes, 34<br>São Francisco, Niterói — RJ</p>
+    </div>
+
+    <div style="text-align: center; margin: 2rem 0;">
+      <a href="https://www.google.com/maps/search/?api=1&query=Estrada+Leopoldo+Fr%C3%B3es%2C+34+-+S%C3%A3o+Francisco%2C+Niter%C3%B3i+-+RJ"
+         target="_blank" rel="noopener" class="btn" aria-label="Abrir localização no Google Maps">
+        📍 Abrir no Google Maps
+      </a>
+    </div>
+
+    <div class="map-info">
+      <p><strong>Dicas:</strong></p>
+      <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 1.8;">
+        <li>O restaurante possui estacionamento no local</li>
+        <li>Recomendamos chegar com 10-15 minutos de antecedência</li>
+        <li>De carro do centro de Niterói: aproximadamente 15 minutos</li>
+        <li>Área de fácil acesso pela Estrada Leopoldo Fróes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="min-height:auto;padding:4rem 1.5rem;">
+  <h2>Vamos Conversar?</h2>
+  <div class="content-box" style="text-align:center;">
+    <p style="margin-bottom:2rem;line-height:1.8;">Ficou com alguma dúvida? Entre em contato conosco pelo WhatsApp!</p>
+    <div class="btn-group">
+      <a href="https://wa.me/5521969927796" target="_blank" rel="noopener" class="btn" aria-label="Falar com Dominique via WhatsApp">
+        💬 Falar com a Dominique
+      </a>
+      <a href="https://wa.me/5521972260262" target="_blank" rel="noopener" class="btn btn-secondary" aria-label="Falar com Frederic via WhatsApp">
+        💬 Falar com o Frederic
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar galeria">×</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
+<script>
+// ====== RSVP localStorage ======
+function confirmRSVP(){localStorage.setItem('wedding_rsvp_confirmed','true');document.getElementById('confirmed-message').style.display='block'}
+function checkRSVP(){if(localStorage.getItem('wedding_rsvp_confirmed')==='true'){document.getElementById('confirmed-message').style.display='block'}}
+
+function sendRSVP(e){
+  e.preventDefault();
+  const nome=document.getElementById('nome').value.trim();
+  const pessoas=document.getElementById('pessoas').value.trim();
+  const restricoes=(document.getElementById('restricoes').value||'Nenhuma').trim();
+  const msg = `Ol%C3%A1%2C%20confirmo%20minha%20presen%C3%A7a%20no%20almo%C3%A7o%20do%20casamento%20em%2004%2F12%2F2025.%0A%0ANome%3A%20${encodeURIComponent(nome)}%0ATotal%20de%20pessoas%3A%20${encodeURIComponent(pessoas)}%0ARestri%C3%A7%C3%B5es%20alimentares%3A%20${encodeURIComponent(restricoes)}`;
+  window.open(`https://wa.me/5521969927796?text=${msg}`,'_blank');
+  confirmRSVP();
+}
+
+// ====== Galeria (usando arquivos locais da pasta img/) ======
+let currentSlide=0;
+const galleryImages=[
+  {src:'img/domiefred1.jpg',alt:'foto1'},
+  {src:'img/domiefred2.jpg',alt:'foto2'},
+  {src:'img/domiefred3.jpg',alt:'foto3'},
+  {src:'img/domiefred4.jpg',alt:'foto4'},
+  {src:'img/domiefred5.jpg',alt:'foto5'},
+  {src:'img/domiefred6.jpeg',alt:'foto6'},
+  {src:'img/unidos.jpeg',alt:'foto7'},
+  {src:'img/aliancas.jpeg',alt:'foto8'},
+  {src:'img/aliancasepingente.jpeg',alt:'foto9'},
+  {src:'img/coracao.jpeg',alt:'foto0'}
+];
+
+function renderGalleryTrack(){
+  const track=document.getElementById('gallery-track');
+  track.innerHTML='';
+  galleryImages.forEach((img,i)=>{
+    const item=document.createElement('div');
+    item.className='gallery-item';
+    item.onclick=()=>openLightbox(i);
+    item.innerHTML=`<img src="${img.src}" alt="${img.alt}" loading="lazy" decoding="async">`;
+    track.appendChild(item);
+  });
+}
+
+function initGallery(){
+  const dotsContainer=document.getElementById('gallery-dots');
+  dotsContainer.innerHTML='';
+  galleryImages.forEach((_,i)=>{
+    const dot=document.createElement('button');
+    dot.className='dot'+(i===0?' active':'');
+    dot.setAttribute('aria-label',`Ir para foto ${i+1}`);
+    dot.onclick=()=>goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function moveGallery(dir){
+  currentSlide+=dir;
+  if(currentSlide<0) currentSlide=galleryImages.length-1;
+  if(currentSlide>=galleryImages.length) currentSlide=0;
+  updateGallery();
+}
+function goToSlide(i){currentSlide=i;updateGallery()}
+function updateGallery(){
+  const track=document.getElementById('gallery-track');
+  track.style.transform=`translateX(-${currentSlide*100}%)`;
+  document.querySelectorAll('.dot').forEach((dot,i)=>dot.classList.toggle('active',i===currentSlide));
+}
+
+// ====== Lightbox ======
+function openLightbox(i){
+  const lb=document.getElementById('lightbox');
+  const img=document.getElementById('lightbox-img');
+  img.src=galleryImages[i].src;
+  img.alt=galleryImages[i].alt;
+  lb.classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+  if(e.target.id==='lightbox'||e.target.classList.contains('lightbox-close')){
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow='';
+  }
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow='';
+  }
+});
+
+// ====== Calendário ======
+function addToCalendar(){
+  const googleUrl='https://calendar.google.com/calendar/render?action=TEMPLATE&text=Almo%C3%A7o%20%E2%80%94%20Frederic%20%26%20Dominique&dates=20251204T163000Z/20251204T183000Z&details=Celebra%C3%A7%C3%A3o%20do%20casamento%20de%20Frederic%20e%20Dominique&location=Casa%20Buonasera%2C%20Estrada%20Leopoldo%20Fr%C3%B3es%2C%2034%2C%20Niter%C3%B3i%20-%20RJ&ctz=America/Sao_Paulo';
+  const ics=`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Frederic & Dominique Wedding//PT-BR
+BEGIN:VEVENT
+UID:${Date.now()}@wedding-invite
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').split('.')[0]}Z
+DTSTART:20251204T163000Z
+DTEND:20251204T183000Z
+SUMMARY:Almoço — Frederic & Dominique
+DESCRIPTION:Celebração do casamento de Frederic e Dominique na Casa Buonasera
+LOCATION:Casa Buonasera, Estrada Leopoldo Fróes, 34, São Francisco, Niterói — RJ
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+  const isMobile=/iPad|iPhone|iPod|Android/i.test(navigator.userAgent);
+  if(isMobile){window.open(googleUrl,'_blank')}
+  else{
+    const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+    const link=document.createElement('a');
+    link.href=URL.createObjectURL(blob);
+    link.download='casamento-frederic-dominique.ics';
+    document.body.appendChild(link);link.click();document.body.removeChild(link);
+    setTimeout(()=>{if(confirm('Arquivo .ICS baixado! Deseja também adicionar ao Google Calendar?')){window.open(googleUrl,'_blank')}},500);
+  }
+}
+
+// ====== Init ======
+document.addEventListener('DOMContentLoaded',()=>{
+  renderGalleryTrack();
+  initGallery();
+  updateGallery();
+  checkRSVP();
+
+  // Oculta o indicador ao rolar
+  const indicator=document.querySelector('.scroll-indicator');
+  window.addEventListener('scroll',()=>{
+    if(!indicator) return;
+    if(window.scrollY>100) indicator.classList.add('hidden');
+    else indicator.classList.remove('hidden');
+  });
+});
+</script>
+
+</body>
+</html>
